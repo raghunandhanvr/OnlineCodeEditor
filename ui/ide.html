@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Title for the Application-->
+    <title>Editor</title> 
+
+    <!--Link CSS-->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <!--Main Header-->
+    <div class="header"> Code Editor </div>
+
+    <!--#Drop Down box to choose languages-->
+    <div class="control-panel">
+        Select Language:
+        &nbsp; &nbsp;
+        <select id="language" class ="language" onchange="changeLanguage()">
+        <option value="c"> C </option>
+        <option value="cpp"> C++ </option>
+        <option value="php"> PHP </option>
+        <option value="python"> Python </option>
+        <option value="node"> Node JS </option>
+        </select>
+    </div>
+
+    <!--Space for Editor-->
+    <div class="editor" id="editor"></div>
+    
+    <!--The Run button-->
+    <div class="button-container">
+        <button class="btn" onclick="executeCode()"> Run </button>
+    </div>
+
+    <!--Output Area to show output-->
+    <div class="output"></div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/lib/ace.js"></script>
+
+    <!--Setting up Theme-->
+    <script src="js/lib/theme-monokai.js"></script>
+    
+    <!--Adding functions-->
+    <script src="js/ide.js"></script>
+</body>
+</html>
